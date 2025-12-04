@@ -8,7 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Input\" />
+    <None Remove="Input\Round1Input.txt" />
+    <None Remove="Input\SampleInput.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Input\Round1Input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Input\SampleInput.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

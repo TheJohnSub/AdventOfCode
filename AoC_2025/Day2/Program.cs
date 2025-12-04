@@ -1,7 +1,7 @@
 ﻿using Day2;
 
-//string input = File.ReadAllText("C:\\Project\\AoC_2025\\Day2\\Input\\SampleInput.txt");
-string input = File.ReadAllText("C:\\Project\\AoC_2025\\Day2\\Input\\Round1Input.txt");
+//string input = File.ReadAllText(Directory.GetCurrentDirectory() + "\\Input\\SampleInput.txt");
+string input = File.ReadAllText(Directory.GetCurrentDirectory() + "\\Input\\Round1Input.txt");
 
 var stringRanges = input.Split(',');
 var numberRanges = new List<NumberRange>();
