@@ -1,0 +1,25 @@
+.......S....... (beam: 1)
+.......|.......
+......|^|...... (beam1: 1 + beam9: 1) = 2              										Actual: 2
+......|.|......
+.....|^|^|..... (beam1: 1 + beam3: 2 + beam9: 1) = 4                						Actual: 4
+.....|.|.|.....
+....|^|^|^|.... (beam1: 1 + beam3: 3 + beam5: 3 + beam9: 1) = 8								Actual: 8
+....|.|.|.|....
+...|^|^|||^|... (beam1: 1 + beam3: 4 + beam4: 3 + beam5: 3 + beam6: 1 + beam9: 1) = 13		Actual: 13
+...|.|.|||.|... 
+..|^|^|||^|^|.. (beam1: 1 + beam2: 5 + beam3: 4 + beam4: 3 + beam5: 4 + beam6: 2 + beam9: 1) = 20		Actual: 20
+..|.|.|||.|.|..
+.|^|||^||.||^|. (beam1: 1 + beam1a: 1 + beam2: 5 + beam3: 4 + beam4: 7 + beam5: 4 + beam6: 2 + beam8: 1 + beam9: 1) = 26
+{.1.154.74.21.1}
+.|.|||.||.||.|.
+|^|^|^|^|^|||^|
+|.|.|.|.|.|||.|
+1.#.#.#.#.###.1
+
+Algorithm:
+	-initialize first beam, give possibility value of 1
+	-foreach line
+		-when beam encounters split, create new beam. give it value of splitting beam
+		-beams have to be indexed on the line. if a beam splits into an index value that already contains
+		 a beam, just add the new splitting beam's possibility value into it
